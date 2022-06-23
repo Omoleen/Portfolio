@@ -12,6 +12,7 @@ class About(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     name = models.CharField(max_length=200, blank=True)
+    role = models.CharField(max_length=200, blank=True)
     phone_number = models.CharField(max_length=200)
     linkedin = models.URLField(max_length=200)
     github = models.URLField(max_length=200)
