@@ -14,9 +14,17 @@ class AwardsAdmin(admin.ModelAdmin):
     list_display = ('name', 'institution', 'date')
 
 
+class AboutAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone_number', 'email')
+
+
 admin.site.register(Education, EducationAdmin)
-admin.site.register(Skills)
-admin.site.register(Projects)
+admin.site.register(TechnicalSkill)
+admin.site.register(SoftSkill)
+admin.site.register(Framework)
+admin.site.register(Tool)
+admin.site.register(Project)
 admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Hobbies)
-admin.site.register(Awards, AwardsAdmin)
+admin.site.register(Award, AwardsAdmin)
+admin.site.register(About, AboutAdmin)
