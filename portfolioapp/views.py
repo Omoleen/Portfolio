@@ -31,9 +31,11 @@ def landing(request):
 
 
 def project(request, pk):
+    about = About.objects.get(first_name='emmanuel')
     project = Project.objects.get(pk=pk)
     context = {
         'project': project,
-        'base_url': BASE_URL
+        'base_url': BASE_URL,
+        'about': about
     }
     return render(request, 'project.html', context)
