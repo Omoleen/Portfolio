@@ -11,6 +11,7 @@ from datetime import datetime
 class About(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
+    other_name = models.CharField(max_length=200, blank=True)
     name = models.CharField(max_length=200, blank=True)
     role = models.CharField(max_length=200, blank=True)
     phone_number = models.CharField(max_length=200)
