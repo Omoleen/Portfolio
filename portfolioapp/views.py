@@ -6,15 +6,15 @@ from Portfolio.settings import BASE_URL
 
 def landing(request):
     about = About.objects.get(first_name='emmanuel')
-    technical = TechnicalSkill.objects.filter()
-    soft = SoftSkill.objects.filter()
-    framework = Framework.objects.filter()
-    tools = Tool.objects.filter()
-    projects = Project.objects.filter()
-    education = Education.objects.filter()
-    experience = Experience.objects.filter()
-    hobbies = Hobbies.objects.filter()
-    awards = Award.objects.filter()
+    technical = TechnicalSkill.objects.all()
+    soft = SoftSkill.objects.all()
+    framework = Framework.objects.all()
+    tools = Tool.objects.all()
+    projects = Project.objects.all()
+    education = Education.objects.all()
+    experience = Experience.objects.all()
+    hobbies = Hobbies.objects.all()
+    awards = Award.objects.all()
     context = {
         'about': about,
         'technicals': technical,
