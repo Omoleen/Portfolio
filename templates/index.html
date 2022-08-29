@@ -158,7 +158,7 @@
                                 <div class="subheading mb-3">{{ item.company_name }}</div>
                                 <p>{{ item.about }}</p>
                             </div>
-                            <div class="flex-shrink-0"><span class="text-primary">{{ item.start }} - {{ item.end }}</span></div>
+                            <div class="flex-shrink-0"><span class="text-primary">{{ item.start }} - {% if item.end is None %}Present{% elif item.end is not None %}{{ item.end }}{% endif %}</span></div>
                         </div>
                     {% endfor %}
                 </div>
