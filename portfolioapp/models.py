@@ -85,6 +85,7 @@ class Education(models.Model):
 class Experience(models.Model):
     position = models.CharField(max_length=200)
     company_name = models.CharField(max_length=200)
+    location = models.CharField(max_length=200, blank=True, null=True)
     about = models.CharField(max_length=500, blank=True)
     start = models.DateField()
     end = models.DateField(blank=True, null=True)
