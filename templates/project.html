@@ -50,7 +50,9 @@
                 <div class="card-body">
                     <h3 class="mb-0">{{ project.name }}</h3>
                     <div class="subheading mb-3">{{ project.category }}</div>
-                    <div>{{ project.about }}</div>
+                    {% for statement in project_about %}
+                        <div>{{ statement }}</div>
+                    {% endfor %}
                     <div class="mt-2">Tools: {% for item in project.tools.all %}{{ item }}, {% endfor %}</div>
                     <div class="mt-2">Languages: {% for item in project.languages.all %}{{ item }}, {% endfor %}</div>
                     <div class="mt-2"><a href="{{ project.link }}">{{ project.link }}</a></div>
