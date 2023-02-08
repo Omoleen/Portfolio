@@ -12,7 +12,7 @@ def landing(request):
     tools = Tool.objects.all()
     projects = Project.objects.all()
     education = Education.objects.all()
-    experience = Experience.objects.all()
+    experience = Experience.objects.all().order_by('-id')
     hobbies = Hobbies.objects.all()
     awards = Award.objects.all()
     context = {

@@ -59,7 +59,7 @@ class Tool(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    about = models.CharField(max_length=1000)
+    about = models.TextField(null=True)
     languages = models.ManyToManyField(TechnicalSkill)
     tools = models.ManyToManyField(Tool, blank=True)
     link = models.URLField(max_length=200, blank=True)
@@ -74,7 +74,7 @@ class Education(models.Model):
     degree = models.CharField(max_length=200)
     degree_type = models.CharField(max_length=200, blank=True)
     school_name = models.CharField(max_length=200)
-    coursework = models.CharField(max_length=500)
+    coursework = models.TextField()
     start_date = models.IntegerField(default=1999)
     end_date = models.IntegerField(blank=True, null=True)
 
@@ -86,7 +86,7 @@ class Experience(models.Model):
     position = models.CharField(max_length=200)
     company_name = models.CharField(max_length=200)
     location = models.CharField(max_length=200, blank=True, null=True)
-    about = models.CharField(max_length=500, blank=True)
+    about = models.TextField(null=True, blank=True)
     start = models.DateField()
     end = models.DateField(blank=True, null=True)
 
