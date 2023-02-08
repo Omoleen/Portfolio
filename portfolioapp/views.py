@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .models import *
 from django.contrib.auth.models import User
 from Portfolio.settings import BASE_URL
