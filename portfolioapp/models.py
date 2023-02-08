@@ -18,7 +18,7 @@ class About(models.Model):
     linkedin = models.URLField(max_length=200)
     github = models.URLField(max_length=200)
     email = models.EmailField(max_length=200)
-    summary = models.CharField(max_length=500, blank=True)
+    summary = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         self.name = self.last_name + ' ' + self.first_name
