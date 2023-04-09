@@ -157,7 +157,9 @@
                                 <h3 class="mb-0">{{ item.position }}</h3>
                                 <div class="subheading mb-1">{{ item.company_name }}</div>
                                 <div class="text-muted mb-3">{{ item.location }}</div>
-                                <p>{{ item.about }}</p>
+                                {% for statement in item.get_list %}
+                                    <div class="">{{ statement }}</div>
+                                {% endfor %}
                             </div>
                             <div class="flex-shrink-0"><span class="text-primary">{{ item.start }} - {% if item.end is None %}Present{% elif item.end is not None %}{{ item.end }}{% endif %}</span></div>
                         </div>

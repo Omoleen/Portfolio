@@ -93,6 +93,9 @@ class Experience(models.Model):
     def __str__(self):
         return self.company_name
 
+    def get_list(self):
+        return self.about.split('\n')
+
 
 class Hobbies(models.Model):
     hobbies = models.CharField(max_length=200)
