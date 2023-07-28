@@ -23,10 +23,7 @@ class About(models.Model):
 
     def save(self, *args, **kwargs):
         self.name = self.last_name + ' ' + self.first_name
-        self.name = self.name.title()
         if self.resume:
-            old = About.objects.get(id=self.id)
-            old.resume.delete(save=False)
             self.resume.save('Omole_Emmanuel_Resume.pdf', self.resume.file, save=False)
         super().save(*args, **kwargs)
 
