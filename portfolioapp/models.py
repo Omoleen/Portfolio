@@ -19,10 +19,15 @@ class About(models.Model):
     github = models.URLField(max_length=200)
     email = models.EmailField(max_length=200)
     summary = models.TextField(blank=True)
+    resume = models.FileField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.name = self.last_name + ' ' + self.first_name
         self.name = self.name.title()
+        if self.resume:
+            old = About.objects.get(id=self.id)
+            old.resume.delete(save=False)
+            self.resume.save('Omole_Emmanuel_Resume.pdf', self.resume.file, save=False)
         super().save(*args, **kwargs)
 
     def __str__(self):

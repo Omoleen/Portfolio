@@ -54,7 +54,7 @@
                         <a href="mailto:{{ about.email }}">{{ about.email }}</a>
                     </div>
                     <p class="mb-3">{{ about.summary }}</p>
-                    <a download="" href="{% static 'pdf/Omole_Emmanuel_Resume__Copy_.pdf' %}" class="btn btn-outline-primary mb-5">
+                    <a download="" href="{% get_media_prefix %}{{ about.resume }}" class="btn btn-outline-primary mb-5">
                         Download CV <i class="ri-download-line"></i>
                     </a>
                     <div class="social-icons">
