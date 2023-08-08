@@ -54,9 +54,14 @@
                         <a href="mailto:{{ about.email }}">{{ about.email }}</a>
                     </div>
                     <p class="mb-3">{{ about.summary }}</p>
-                    <a download="" href="{% get_media_prefix %}{{ about.resume }}" class="btn btn-outline-primary mb-5">
-                        Download CV <i class="ri-download-line"></i>
+                    <div class="d-flex gap-3">
+                    <a download="" href="{% get_media_prefix %}{{ about.python_resume }}" class="btn btn-outline-primary mb-5">
+                        Download Python CV <i class="ri-download-line"></i>
                     </a>
+                    <a download="" href="{% get_media_prefix %}{{ about.javascript_resume }}" class="btn btn-outline-primary mb-5">
+                        Download Javascript CV <i class="ri-download-line"></i>
+                    </a>
+                    </div>
                     <div class="social-icons">
                         <a class="social-icon" href="{{ about.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="{{ about.github }}"><i class="fab fa-github"></i></a>
